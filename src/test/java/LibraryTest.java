@@ -9,7 +9,7 @@ public class LibraryTest {
 
     @Before
     public void before() {
-        library = new Library();
+        library = new Library(40);
         book = new Book("A Wild Sheep Chase", "Haruki Murakami", "Fiction");
     }
 
@@ -19,6 +19,10 @@ public class LibraryTest {
     }
 
     @Test
-    
+    public void canAddBook() {
+       library.addBook(book);
+       assertEquals(1, library.bookCount());
+    }
+
 
 }
