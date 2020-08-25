@@ -9,7 +9,7 @@ public class LibraryTest {
 
     @Before
     public void before() {
-        library = new Library(40);
+        library = new Library(3);
         book = new Book("A Wild Sheep Chase", "Haruki Murakami", "Fiction");
     }
 
