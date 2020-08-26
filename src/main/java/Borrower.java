@@ -1,24 +1,25 @@
 import java.util.ArrayList;
 
-public class Library {
+public class Borrower {
     private ArrayList<Book> books;
-    private int capacity;
 
-    public Library(int capacity) {
+    public Borrower() {
         this.books = new ArrayList<Book>();
-        this.capacity = capacity;
     }
+
 
     public int bookCount() {
         return this.books.size();
     }
 
     public void addBook(Book book) {
-        if (this.bookCount() < this.capacity)
         this.books.add(book);
     }
 
-    public Book removeBook() {
-        return this.books.remove(0);
+    public void pickUpFromLibrary(Library library) {
+        Book book = library.removeBook();
+        this.addBook(book);
     }
+
+
 }
